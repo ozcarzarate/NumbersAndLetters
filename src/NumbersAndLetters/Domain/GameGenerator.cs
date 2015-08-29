@@ -1,8 +1,9 @@
 ﻿using System;
 using NumbersAndLetters.Domain;
 using NumbersAndLetters.Domain.Interfaces;
+using System.Collections.Generic;
 
-namespace NumberAndLetters.UnitTest.Domain
+namespace NumberAndLetters.Domain
 {
     internal class GameGenerator : IGameGenerator
     {
@@ -12,7 +13,14 @@ namespace NumberAndLetters.UnitTest.Domain
 
         public Game Get(int bigs, int smalls)
         {
-            throw new NotImplementedException();
+            var result = new Game
+            {
+                Bigs = new List<int> { 50, 20 },
+                Smalls = new List<int> { 2, 5, 7, 1 },
+                Sample = "(20 * 50) - (2 * 5 * 7) + 1"
+            };
+
+            return result;
         }
     }
 }

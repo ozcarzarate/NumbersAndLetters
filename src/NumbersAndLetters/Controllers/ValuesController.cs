@@ -1,12 +1,21 @@
 ﻿using NumbersAndLetters.Domain;
 using System.Collections.Generic;
 using Microsoft.AspNet.Mvc;
+using NumbersAndLetters.Domain.Interfaces;
+using NumberAndLetters.Domain;
 
 namespace NumbersAndLetters.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private IGameGenerator _gameGenerator;
+
+        //public ValuesController(IGameGenerator gameGenerator)
+        //{
+        //    _gameGenerator = gameGenerator;
+        //}
+
         // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -16,14 +25,10 @@ namespace NumbersAndLetters.Controllers
 
         // GET api/values/5
         [HttpGet("{numberOfSmall}/{numberOfBig}")]
-        public Game Get(int numberOfSmall, int numberOfBig)
+        public Game Get(int numberOfSmalls, int numberOfBigs)
         {
-            var result = new Game
-            {
-                Bigs = new List<int> { 50, 20 },
-                Smalls = new List<int> { 2, 5, 7, 1 },
-                Sample = "(20 * 50) - (2 * 5 * 7) + 1"
-            };
+            _gameGenerator = new GameGenerator();
+            var result = _gameGenerator.Get(numberOfSmalls, numberOfBigs);
 
             return result;
         }
