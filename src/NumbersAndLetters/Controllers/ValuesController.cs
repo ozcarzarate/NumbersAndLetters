@@ -1,7 +1,5 @@
-﻿using System;
+﻿using NumbersAndLetters.Domain;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
 namespace NumbersAndLetters.Controllers
@@ -17,10 +15,17 @@ namespace NumbersAndLetters.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{numberOfSmall}/{numberOfBig}")]
+        public Game Get(int numberOfSmall, int numberOfBig)
         {
-            return "value";
+            var result = new Game
+            {
+                Bigs = new List<int> { 50, 20 },
+                Smalls = new List<int> { 2, 5, 7, 1 },
+                Sample = "(20 * 50) - (2 * 5 * 7) + 1"
+            };
+
+            return result;
         }
 
         // POST api/values
