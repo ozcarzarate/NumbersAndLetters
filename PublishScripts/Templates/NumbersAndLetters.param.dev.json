@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "NumbersAndLetters"
+  },
+  "hostingPlanName": {
+    "value": "Default1"
+  },
+  "siteLocation": {
+    "value": "Australia Southeast"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "68a2cc30-8eb9-4848-b2bb-2e9720f425b6"
+  },
+  "resourceGroup": {
+    "value": "Default-Web-AustraliaSoutheast"
+  }
+}
