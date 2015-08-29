@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 		PublishScripts\Templates\NumbersAndLetters.param.dev.json = PublishScripts\Templates\NumbersAndLetters.param.dev.json
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberAndLetters.UnitTest", "NumberAndLetters.UnitTest\NumberAndLetters.UnitTest.csproj", "{C087ABD5-2905-4BBA-B69F-1C2CA6E9BBBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{9F7EA976-664D-4B81-9B17-BDAA241B72BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F7EA976-664D-4B81-9B17-BDAA241B72BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F7EA976-664D-4B81-9B17-BDAA241B72BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C087ABD5-2905-4BBA-B69F-1C2CA6E9BBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C087ABD5-2905-4BBA-B69F-1C2CA6E9BBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C087ABD5-2905-4BBA-B69F-1C2CA6E9BBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C087ABD5-2905-4BBA-B69F-1C2CA6E9BBBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,5 +49,6 @@ Global
 		{9F7EA976-664D-4B81-9B17-BDAA241B72BC} = {1599814D-01EB-4135-831E-32F6D3135EAE}
 		{54F5EDF7-41E7-4C42-B41C-842A5FC364BB} = {66083F57-52B8-4703-AFB3-96A997BD35D0}
 		{750D7648-4789-4A9E-BE94-5270CBDEB857} = {66083F57-52B8-4703-AFB3-96A997BD35D0}
+		{C087ABD5-2905-4BBA-B69F-1C2CA6E9BBBC} = {1599814D-01EB-4135-831E-32F6D3135EAE}
 	EndGlobalSection
 EndGlobal
