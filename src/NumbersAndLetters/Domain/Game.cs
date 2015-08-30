@@ -9,6 +9,7 @@ namespace NumbersAndLetters.Domain
     {
         public List<int> Smalls { get; set; }
         public List<int> Bigs { get; set; }
+        public int Result { get; set; }
         public string Sample { get; set; }
     }
 }

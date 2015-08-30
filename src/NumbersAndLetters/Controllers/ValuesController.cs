@@ -24,7 +24,7 @@ namespace NumbersAndLetters.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{numberOfSmall}/{numberOfBig}")]
+        [HttpGet("{numberOfSmalls}/{numberOfBigs}")]
         public Game Get(int numberOfSmalls, int numberOfBigs)
         {
             _gameGenerator = new GameGenerator();
