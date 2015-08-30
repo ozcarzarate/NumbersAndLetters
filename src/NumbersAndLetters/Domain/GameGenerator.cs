@@ -2,6 +2,7 @@
 using NumbersAndLetters.Domain;
 using NumbersAndLetters.Domain.Interfaces;
 using System.Collections.Generic;
+using System.Text;
 
 namespace NumberAndLetters.Domain
 {
@@ -9,6 +10,7 @@ namespace NumberAndLetters.Domain
     {
         private List<int> _smalls = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         private List<int> _bigs = new List<int> { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+        private StringBuilder _sample = new StringBuilder();
 
         public GameGenerator()
         {
@@ -23,7 +25,7 @@ namespace NumberAndLetters.Domain
                 Bigs = listOfBigs,
                 Smalls = listOfSmalls,
                 Result = GetResult(listOfBigs, listOfSmalls),
-                Sample = "(20 * 50) - (2 * 5 * 7) + 1"
+                Sample = _sample.ToString()
             };
 
             return result;
@@ -32,12 +34,20 @@ namespace NumberAndLetters.Domain
         private int GetResult(List<int> listOfBigs, List<int> listOfSmalls)
         {
             var result = 1;
-            listOfBigs.ForEach(x => result *= x);
+            _sample.Append("(");
+            for (int i = 0; i < listOfBigs.Count; i++)
+            {
+                result *= listOfBigs[i];
+                _sample.Append(listOfBigs[i] + (i < listOfBigs.Count-1 ? " * ":")"));
+            }
+            _sample.Append(" - (");
             for (int i = 0; i < listOfSmalls.Count-1; i++)
             {
                 result -= listOfSmalls[i];
+                _sample.Append(listOfSmalls[i] + (i < listOfSmalls.Count - 2 ? " + " : ") + "));
             }
             result += listOfSmalls[listOfSmalls.Count - 1];
+            _sample.Append(listOfSmalls[listOfSmalls.Count - 1]);
             return result;
         }
 
